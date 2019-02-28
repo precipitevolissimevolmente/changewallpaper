@@ -70,7 +70,7 @@ jar uf $ROOT_DIR/modules/$MOD.jar -C $ROOT_DIR/classes module-info.class
 
 cd $ROOT_DIR
 
-rm -rf work classes
+#rm -rf work classes
 
 echo "modular jars are in $PWD/module"
 

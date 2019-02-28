@@ -8,10 +8,16 @@ import com.sun.jna.win32.W32APITypeMapper;
 
 import java.util.HashMap;
 
+/*
+ * Using Java Native Access (JNA)
+ * https://github.com/java-native-access/jna
+ * */
 public class ChangeWallpaper {
     public static void main(String[] args) {
-        //supply your own path instead of using this one
-        String path = "C:\\Pictures\\DSC_5342.jpg";
+        if (args.length == 0) {
+            System.out.println("Please specify yor own picture path");
+        }
+        String path = args.length == 0 ? "C:\\Pictures\\default.jpg" : args[0];
 
         SPI.INSTANCE.SystemParametersInfo(
                 new WinDef.UINT_PTR(SPI.SPI_SETDESKWALLPAPER),
