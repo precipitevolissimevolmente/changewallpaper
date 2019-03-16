@@ -13,7 +13,7 @@ java --list-modules
 java --module-path=target/modules --module local/impl.ChangeWallpaper C:\Pictures\DSC_2472.jpg
 jLink --module-path=target/modules --add-modules local,com.sun.jna,com.sun.jna.platform --output myApp --launcher myApp=local/impl.ChangeWallpaper
 
-> For **jLink** to work with com.sun.jna library we need to transform with **jdeps --generate-module-info**
+> For **jLink** to work with com.sun.jna library we need to transform with **jdeps --generate-module-info**,
 > please check \changewallpaper\bash\run.sh
 
 ## Experiment with the Java Shell tool (JShell)
